@@ -77,7 +77,7 @@ Characters are discovered by directory enumeration, not by a registry. Create `s
 
 The folder name becomes the type string stored in the `gnomelet-type` GSettings array, so renaming a folder orphans any saved state pointing at it. Re-run `./scripts/install.sh` (or restart the shell after a dev install) and the new character will appear in the preferences dropdown.
 
-For full character authoring guidance — sprite sizing, transparent backgrounds, slicing sheets with `scripts/split_sprites.py`, the doom-band slicer, palette conventions — see [`docs/CHARACTERS.md`](docs/CHARACTERS.md).
+For full character authoring guidance — sprite sizing, transparent backgrounds, the doom-band slicer at `scripts/slice_doom_band.py`, palette conventions — see [`docs/CHARACTERS.md`](docs/CHARACTERS.md).
 
 ## Logs and debugging
 
