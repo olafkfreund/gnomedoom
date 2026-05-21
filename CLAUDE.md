@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+See `docs/ARCHITECTURE.md` for prose explanations of the tick loop, state machine, z-order modes, dock detection, persistence, and per-character mechanics, with file/line citations.
+
 ## Project
 
 GNOME Shell extension "GnomeDoom" — animated pixel-art characters (skeletons, etc.) that walk, fall, and jump across the desktop, interacting with windows and docks. Forked from the upstream Gnomelets extension; renamed to coexist with it without collision. Targets GNOME Shell 45–50.
