@@ -25,7 +25,7 @@ export const GnomeletManager = GObject.registerClass(
 
             // Resource cache: { [type: string]: { frames: GIcon[], w: int, h: int } }
             this._resources = {};
-            this._cacheFile = GLib.get_user_cache_dir() + '/gnomelets-state.json';
+            this._cacheFile = GLib.get_user_cache_dir() + '/gnomedoom-state.json';
             this._pendingState = null;
             this._isPaused = !this._settings.get_boolean('is-enabled');
         }
@@ -68,7 +68,7 @@ export const GnomeletManager = GObject.registerClass(
          */
         async _loadResourcesAndSpawn(hardReset = false) {
             let types = this._settings.get_strv('gnomelet-type');
-            if (!types || types.length === 0) types = ['Santa'];
+            if (!types || types.length === 0) types = ['SkeletonGuitarist', 'SkeletonDrummer', 'SkeletonVocalist', 'SkeletonDancer', 'SkullDancer'];
 
             let loadedSomething = false;
 
@@ -313,7 +313,7 @@ export const GnomeletManager = GObject.registerClass(
 
             // Random from selected
             let selectedTypes = this._settings.get_strv('gnomelet-type');
-            if (!selectedTypes || selectedTypes.length === 0) selectedTypes = ['Santa'];
+            if (!selectedTypes || selectedTypes.length === 0) selectedTypes = ['SkeletonGuitarist', 'SkeletonDrummer', 'SkeletonVocalist', 'SkeletonDancer', 'SkullDancer'];
             // Filter those that are actually loaded
             let valid = selectedTypes.filter(t => this._resources[t]);
 

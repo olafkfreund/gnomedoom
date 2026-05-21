@@ -10,7 +10,7 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 export const GnomeletIndicator = GObject.registerClass(
     class GnomeletIndicator extends PanelMenu.Button {
         _init(extension) {
-            super._init(0.0, 'Gnomelets Indicator');
+            super._init(0.0, 'GnomeDoom Indicator');
 
             this._extension = extension;
             this._manager = extension._manager;
@@ -30,7 +30,7 @@ export const GnomeletIndicator = GObject.registerClass(
             }, this);
 
             // Item: Re-spawn
-            this.respawnItem = new PopupMenu.PopupMenuItem('Re-spawn Gnomelets');
+            this.respawnItem = new PopupMenu.PopupMenuItem('Re-spawn Characters');
             this.respawnItem.connectObject('activate', () => {
                 this._manager._hardReset();
             }, this);
@@ -57,9 +57,9 @@ export const GnomeletIndicator = GObject.registerClass(
 
         _updateToggleLabel() {
             if (this._manager.isVisualizationEnabled) {
-                this.toggleItem.label.text = 'Disable Gnomelets';
+                this.toggleItem.label.text = 'Disable GnomeDoom';
             } else {
-                this.toggleItem.label.text = 'Enable Gnomelets';
+                this.toggleItem.label.text = 'Enable GnomeDoom';
             }
         }
 

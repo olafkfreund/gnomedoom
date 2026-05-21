@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-UUID="gnomelets@mcast.gnomext.com"
+UUID="gnomedoom@olafkfreund.github.io"
 INSTALL_DIR="$HOME/.local/share/gnome-shell/extensions/$UUID"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
@@ -15,7 +15,7 @@ if [[ "$1" == "--zip" ]]; then
     ZIP_MODE=true
 fi
 
-echo "🚧 Building and Installing Gnomelets Extension..."
+echo "🚧 Building and Installing GnomeDoom Extension..."
 
 # 1. Compile Schemas
 echo "⚙️ Compiling schemas..."

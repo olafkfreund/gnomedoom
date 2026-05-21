@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist gettext-domain="gnomelets">
-  <schema id="org.gnome.shell.extensions.gnomelets" path="/org/gnome/shell/extensions/gnomelets/">
+<schemalist gettext-domain="gnomedoom">
+  <schema id="org.gnome.shell.extensions.gnomedoom" path="/org/gnome/shell/extensions/gnomedoom/">
     <key name="floor-z-order" type="s">
       <choices>
         <choice value="allow"/>
@@ -20,7 +20,7 @@
       <default>false</default>
       <summary>In Front of Dock</summary>
       <description>
-        If true, gnomelets are drawn in front of the dock of "Dash to Dock" or Panel of "Dash to Panel".
+        If true, characters are drawn in front of the dock of "Dash to Dock" or Panel of "Dash to Panel".
         If false, they are drawn behind.
       </description>
     </key>
@@ -37,29 +37,29 @@
       </description>
     </key>
     <key name="gnomelet-type" type="as">
-      <default>['Santa']</default>
-      <summary>Gnomelet Characters</summary>
-      <description>The kinds of gnomelet to display. If multiple are selected, they will be chosen randomly.</description>
+      <default>['SkeletonGuitarist', 'SkeletonDrummer', 'SkeletonVocalist', 'SkeletonDancer', 'SkullDancer']</default>
+      <summary>Characters</summary>
+      <description>The kinds of character to display. If multiple are selected, they will be chosen randomly.</description>
     </key>
     <key name="gnomelet-count" type="i">
       <default>5</default>
-      <summary>Number of Gnomelets</summary>
-      <description>The number of gnomelets to spawn.</description>
+      <summary>Number of Characters</summary>
+      <description>The number of characters to spawn.</description>
     </key>
     <key name="gnomelet-scale" type="i">
       <default>64</default>
-      <summary>Gnomelet Scale</summary>
-      <description>The target height of the gnomelet in pixels.</description>
+      <summary>Character Scale</summary>
+      <description>The target height of the character in pixels.</description>
     </key>
     <key name="reset-trigger" type="b">
       <default>false</default>
       <summary>Reset Trigger</summary>
-      <description>Toggle this to respawn all gnomelets.</description>
+      <description>Toggle this to respawn all characters.</description>
     </key>
     <key name="is-enabled" type="b">
       <default>true</default>
       <summary>Is Enabled</summary>
-      <description>Whether the gnomelets are visible/active.</description>
+      <description>Whether the characters are visible/active.</description>
     </key>
     <key name="show-indicator" type="b">
       <default>true</default>
@@ -69,7 +69,7 @@
     <key name="allow-interaction" type="b">
       <default>false</default>
       <summary>Allow Interaction</summary>
-      <description>If true, gnomelets can be dragged with the mouse.</description>
+      <description>If true, characters can be dragged with the mouse.</description>
     </key>
     <key name="jump-power" type="i">
       <default>20</default>
@@ -79,7 +79,7 @@
     <key name="spawn-offset" type="i">
       <default>0</default>
       <summary>Spawn Offset from Top</summary>
-      <description>The vertical offset from the top of the screen where gnomelets spawn.</description>
+      <description>The vertical offset from the top of the screen where characters spawn.</description>
     </key>
   </schema>
 </schemalist>

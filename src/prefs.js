@@ -15,8 +15,8 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
 
         // Gnomelet Character Group
         const charExpander = new Adw.ExpanderRow({
-            title: 'Gnomelet Characters',
-            subtitle: 'Select which gnomelets to display',
+            title: 'Characters',
+            subtitle: 'Select which characters to display',
         });
         group.add(charExpander);
 
@@ -44,7 +44,7 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
                 }
 
                 types.sort();
-                if (types.length === 0) types.push('Santa');
+                if (types.length === 0) types.push('SkeletonGuitarist');
 
                 // Get currently selected types (array of strings)
                 let currentTypes = settings.get_strv('gnomelet-type');
@@ -78,7 +78,7 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
         );
 
         // Gnomelet Count Row
-        const countRow = new Adw.ActionRow({ title: 'Number of Gnomelets' });
+        const countRow = new Adw.ActionRow({ title: 'Number of Characters' });
         const countSpin = new Gtk.SpinButton({
             adjustment: new Gtk.Adjustment({
                 lower: 1,
@@ -92,7 +92,7 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
         group.add(countRow);
 
         // Gnomelet Scale Row
-        const scaleRow = new Adw.ActionRow({ title: 'Gnomelet Size (px)' });
+        const scaleRow = new Adw.ActionRow({ title: 'Character Size (px)' });
         const scaleSpin = new Gtk.SpinButton({
             adjustment: new Gtk.Adjustment({
                 lower: 32,
@@ -167,7 +167,7 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
         // In Front of Dock (mapped to dock-z-order)
         const dockZOrderRow = new Adw.ActionRow({
             title: 'In Front of Dock',
-            subtitle: 'If enabled, gnomelets appear in front of "Dash to Dock (Ubuntu Dock)" or "Dash to Panel"',
+            subtitle: 'If enabled, characters appear in front of "Dash to Dock (Ubuntu Dock)" or "Dash to Panel"',
         });
         const dockZOrderSwitch = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
@@ -211,7 +211,7 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
         // Allow Interaction
         const interactionRow = new Adw.ActionRow({
             title: 'Allow Interaction',
-            subtitle: 'Enable dragging gnomelets with the mouse',
+            subtitle: 'Enable dragging characters with the mouse',
         });
         const interactionSwitch = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
@@ -223,7 +223,7 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
         // Show Indicator
         const indicatorRow = new Adw.ActionRow({
             title: 'Show Menu Indicator',
-            subtitle: 'Show the gnomelet menu in the top bar',
+            subtitle: 'Show the GnomeDoom menu in the top bar',
         });
         const indicatorSwitch = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
@@ -238,7 +238,7 @@ export default class DesktopGnomeletsPreferences extends ExtensionPreferences {
 
         const respawnRow = new Adw.ActionRow({ title: 'Reset State' });
         const respawnButton = new Gtk.Button({
-            label: 'Respawn Gnomelets',
+            label: 'Respawn Characters',
             valign: Gtk.Align.CENTER,
         });
 

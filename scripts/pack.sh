@@ -3,7 +3,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 SRC_DIR="$PROJECT_ROOT/src"
-ZIP_NAME="$PROJECT_ROOT/temp/gnomelets.zip"
+ZIP_NAME="$PROJECT_ROOT/temp/gnomedoom.zip"
 
 # Create temp directory if it doesn't exist
 mkdir -p "$PROJECT_ROOT/temp"
@@ -21,7 +21,7 @@ cd "$SRC_DIR" || exit
 zip -r "$ZIP_NAME" extension.js \
     metadata.json \
     prefs.js \
-    schemas/org.gnome.shell.extensions.gnomelets.gschema.xml \
+    schemas/org.gnome.shell.extensions.gnomedoom.gschema.xml \
     images/ \
     manager.js \
     gnomelet.js \
