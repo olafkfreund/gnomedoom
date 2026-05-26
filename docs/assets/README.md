@@ -33,6 +33,13 @@ Rules:
 
 The exact tooling depends on your session type.
 
+> **Quickest path:** run `scripts/record-demo.sh` from the repo root. It
+> auto-detects your session type (X11 or Wayland), captures the screen,
+> compresses the result with gifsicle, and deposits an optimised
+> `docs/assets/demo.gif` in one step. See the script's `--help` output for
+> `--duration` and `--region` options. The manual steps below are provided
+> for reference if you prefer a different tool.
+
 ### X11
 
 ```bash
